@@ -12,16 +12,9 @@ do
   then
     echo "deploying commit $toref..."
     GIT_WORK_TREE=$deploydir git checkout -f master
-    if [[ $? -gt 0 ]]
-    then
-      echo "deploy successful. removing miscellaneous files..."
-      rm -r $deploydir/.git*
-      rm -r $deploydir/*.sql
-      rm -r $deploydir/*.md
-      echo "done."
-    else
-      echo "something went wrong checking out the git repo - error code $?."
-    fi
+    rm -r $deploydir/.git*
+    rm -r $deploydir/*.sql
+    rm -r $deploydir/*.md
   else
     echo "not a master push (on branch $branch); not deploying"
   fi
