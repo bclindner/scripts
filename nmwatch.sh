@@ -1,8 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# nmwatch.sh - check NetworkManager connections and automatically restart any dead connections. great for keeping VPNs and other interfaces up when NetworkManager fails to do so.
-# usage: ./nmwatch.sh [connections-to-keep-alive]
-
+# nmwatch.sh
+# Description: Check NetworkManager connections and automatically restart any dead connections. Great for keeping VPNs and other interfaces up when NetworkManager fails to do so.
+# Usage: ./nmwatch.sh [connections-to-keep-alive]
+# Requires: bash, nmcli, grep, awk, echo - most GNU/Linux/systemd systems should have these
+#
+# dev notes:
+# funny story behind this one! as of the time of this writing, this script is deployed to a Raspberry Pi that captures my apartment's provided Wi-Fi network and relays it through the ethernet port to a Nintendo Switch dock nearby, relaying all traffic to and from that connection through a VPN, in what might be the greatest home network bodge I've ever done.
+# all of this was set up because ISP-managed Wi-Fi hotspots are the only way to connect to the Internet here, and due to a combination of their NAT settings and Nintendo's insistence on using peer-to-peer architectures for online multiplayer games, many Nintendo games won't allow me to play online. this setup is the only way I can evade the NAT rules and make online connections while still keeping latency low enough to play the game.
+# this script comes into play because the VPN occasionally dies (i think due to lack of activity) and I have to plug in a keyboard and restart the connection manually. i could have fixed this in a simpler way (namely a oneliner that greps `nmcli con show` for connection status and reconnects when a grep fails), but i took the opportunity to learn a bit of awk to also give myself a semi-real-time readout of the network connection status, so i could see if all the connections were on at a glance when something wasn't working right.
 
 
 # this program needs to loop infinitely
