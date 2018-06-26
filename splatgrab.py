@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # splatgrab.py:
-## Grabs posts from Twitter accounts based on hashtags,
+## Grabs Splatoon 2 Miiverse posts from Twitter accounts based on hashtags,
 ## then crops, converts, and saves them to uncompressed 1-bit GIF images.
 #
 # Requires: tweepy, pillow, requests

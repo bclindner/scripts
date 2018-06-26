@@ -3,7 +3,7 @@
 
 # hacky post-receive script.
 # checks if ref has been pushed then copies the dir to the deployment dir, removing some sensitive files in the deploy dir.
-# probably shouldn't use this in any serious production, but it works for class, so w/e
+# probably shouldn't use this in any serious production due to the insecure nature of rms, but it works for class, so w/e
 
 while read fromref toref branch
 do
