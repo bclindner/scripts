@@ -38,7 +38,10 @@ class HTMLValidator:
             msgs = json.load(res)['messages']
             for msg in msgs:
                 if msg['type'] == "error":
-                    self.errors.append(ValidationMessage(msg['lastLine'],msg['message']))
+                    if 'lastLine' in msg:
+                        self.errors.append(ValidationMessage(msg['lastLine'],msg['message']))
+                    else:
+                        self.errors.append(ValidationMessage(-1,msg['message']))
         return self.errors
     def __exit__(self, errtype, errval, trace):
         return
