@@ -15,6 +15,8 @@ def sendMessage(msg, config):
         sendGroupMeMessage(msg, config['groupme'])
     if 'pushover' in config:
         sendPushoverNotif(msg, config['pushover'])
+    if 'discord' in config:
+        sendDiscordMessage(msg, config['discord'])
 
 # GroupMe integration
 def sendGroupMeMessage(msg, config):
@@ -34,8 +36,28 @@ def sendPushoverNotif(msg, config):
     pushoveruserkeys = config['userKeys']
     # Send a message for each user key
     for userkey in pushoveruserkeys:
-        requests.post(url='https://api.pushover.net/1/messages.json', json={
+        requests.post(url='https://api.pushover.net/1/messages.json', json=
+            {
                 "token": pushoverappkey,
                 "user": userkey,
                 "message": msg,
-            })
+            }
+        )
+
+# Discord integration
+def sendDiscordMessage(msg, config):
+    # Bot Token
+    token = config['botToken']
+    # List of channels to send to
+    channels = config['channels']
+    # Send a message for each channe;
+    for channel in channels:
+        resp = requests.post(url='https://discordapp.com/api/channels/'+channel+"/messages", json=
+            {
+                "content": msg
+            }, headers=
+            {
+                "Authorization": "Bot "+token
+            }
+        )
+        print(resp.text)
