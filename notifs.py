@@ -50,7 +50,7 @@ def sendDiscordMessage(msg, config):
     token = config['botToken']
     # List of channels to send to
     channels = config['channels']
-    # Send a message for each channe;
+    # Send a message for each channel
     for channel in channels:
         resp = requests.post(url='https://discordapp.com/api/channels/'+channel+"/messages", json=
             {
