@@ -6,8 +6,10 @@
 # Requires: Python 3, Python requests library
 #
 # dev notes:
-# a simple little library I broke out of a script from a class project. pretty straightforward stuff, just hitting the REST APIs for certain services.
-# i should note this is not fault-tolerant; if stuff explodes it doesn't really notify you. may fix that later.
+# a simple little library I broke out of a script from a class project.
+# pretty straightforward stuff, just hitting the REST APIs for certain services.
+# i should note this is not fault-tolerant; if stuff explodes it doesn't really notify you.
+# may fix that later.
 import requests
 
 def sendMessage(msg, config):

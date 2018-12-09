@@ -6,8 +6,12 @@
 # Requires: tweepy, pillow/PIL, requests, default Python libs
 #
 # dev notes:
-# this one was fun to write! i wanted to keep my posts on Splatoon 2 for posterity, but i hated the way they were posted (in blurry 1280x720), and the Splatoon 2 share function requires you to share your post on one of two social networks (Facebook and Twitter) for it to be visible to other players. i could easily pull them from the SD card on the console, but knowing me i would probably never bother to back up, let alone spend the time cropping and cleaning up the images.
-# i already had an account set up for the posts, so i figured, "why not solve both problems with a little bit of Python?" i set up dev credentials, figured out tweepy and PIL, and wrote this script to watch my Switch sharing account, grab the image, crop it, process it, and save it. quite happy with this one!
+# this one was fun to write!
+# i wanted to keep my posts on Splatoon 2 for posterity, but i hated the way they were posted (in blurry 1280x720), and the Splatoon 2 share function requires you to share your post on one of two social networks (Facebook and Twitter) for it to be visible to other players.
+# i could easily pull them from the SD card on the console, but knowing me i would probably never bother to back up, let alone spend the time cropping and cleaning up the images.
+# i already had an account set up for the posts, so i figured, "why not solve both problems with a little bit of Python?"
+# i set up dev credentials, figured out tweepy and PIL, and wrote this script to watch my Switch sharing account, grab the image, crop it, process it, and save it.
+# quite happy with this one!
 
 import tweepy, requests, json, io, os
 from time import sleep

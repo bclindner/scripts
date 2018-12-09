@@ -6,8 +6,10 @@
 # Requires: default Python libraries
 #
 # dev notes:
-# written around 2013 or so, before i started at Georgia Southern. could easily be adapted for most duplicate filename processing. comments were added in post in 2018 as it was being added to my git repo.
-# one of my prouder hacks, honestly! this took me about 15 minutes to write iirc, and i wouldn't have thought to use a stack method were i faced with this problem now!
+# written around 2013 or so, before i started at Georgia Southern.
+# could easily be adapted for most duplicate filename processing.
+# comments were added in post in 2018 as it was being added to my git repo.
+# one of my prouder hacks, honestly!
 
 import os
 # initialize some globals we'll be using in the loop

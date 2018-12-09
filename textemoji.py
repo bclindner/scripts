@@ -4,7 +4,8 @@
 # Description: Converts a string into AlTeRnAtInG cASe and copies it to the clipboard.
 # Usage: ./textemoji.py [prefix] "[text to convert to text-emoji]" [suffix]
 # Requires: Python 3 and pyperclip library
-# dev notes: this is designed primarily to generate text from emoji shortcodes, in particular Discord's :regional_indicator_*: emojis. it's in this repo just so i have it on hand when i need it on my machines.
+# dev notes: this is designed primarily to generate text from emoji shortcodes, in particular Discord's :regional_indicator_*: emojis.
+# it's in this repo just so i have it on hand when i need it on my machines.
 import sys, pyperclip
 
 def textemoji(prefix, string, suffix):
