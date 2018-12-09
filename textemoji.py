@@ -14,9 +14,10 @@ def textemoji(prefix, string, suffix):
             ret += prefix + letter + suffix
         else:
             ret += letter
+        ret += " "
     return ret
 
 prefix = sys.argv[1]
 text = sys.argv[2]
-sufffix = sys.argv[3]
+suffix = sys.argv[3]
 pyperclip.copy(textemoji(prefix, text, suffix))
