@@ -6,7 +6,7 @@
 # Requires: Python 3 and pyperclip library
 # dev notes: this is designed primarily to generate text from emoji shortcodes, in particular Discord's :regional_indicator_*: emojis.
 # it's in this repo just so i have it on hand when i need it on my machines.
-import sys, pyperclip, pyautogui
+import sys
 
 def textemoji(prefix, string, suffix):
     ret = ""
@@ -21,4 +21,4 @@ def textemoji(prefix, string, suffix):
 prefix = sys.argv[1]
 text = sys.argv[2]
 suffix = sys.argv[3]
-pyperclip.copy(textemoji(prefix, text, suffix))
+print(textemoji(prefix, text, suffix))
