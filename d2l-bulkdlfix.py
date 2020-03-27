@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 # d2l-bulkdlfix.py
-# Description: Parses a directory of Desire2Learn bulk-downloaded zipped submissions and trims unwanted metadata that D2L prepends to each filename.
+# Description: Parses a directory of Desire2Learn bulk-downloaded zipped
+#  submissions and trims unwanted metadata that D2L prepends to each filename.
 # Usage: launch script in directory with files to fix
 # Requires: Python 2 or 3
 #

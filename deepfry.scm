@@ -4,8 +4,12 @@
 ; Requires: GIMP with script-fu
 ;
 ; dev notes:
-; this was a difficult one to write because scheme makes me want to scream and throw things.
-; in essence this just adds extreme saturation and sharpening. could probably be improved.
+; this was a difficult one to write because scheme makes me want to scream and
+; throw things.
+;
+; in essence this just adds extreme saturation and sharpening. could probably
+; be improved.
+;
 ; just for making dumb memes occasionally, haha.
 
 

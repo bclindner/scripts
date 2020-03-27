@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 # romconsolidator.py
-# Description: Parses a directory of ROM files, picks out duplicates, prompts the user to decide which ones to keep, if any, and deletes any unwanted duplicates.
+# Description: Parses a directory of ROM files, picks out duplicates, prompts
+#  the user to decide which ones to keep, if any, and deletes any unwanted
+#  duplicates.
 # Usage: launch script in directory with files to fix
 # Requires: default Python libraries
 #

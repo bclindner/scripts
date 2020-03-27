@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 # fortnite-dab-watch.py:
-# Description: Script that checks for dab emotes in the Fortnite store and prints them.
+# Description: Script that checks for dab emotes in the Fortnite store and
+#  prints them.
 # Usage: launch script daily after Fortnite store refresh
 # Requires: Python 3, Requests lib, my notifs library
 #
